@@ -10,9 +10,10 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new subscriber_params
     if @subscriber.save
-      render :new
+      render :newsletter
     else
-      render :new
+      flash[:error] = @subscriber.errors.full_messages.to_sentence
+      redirect_to newsletter_path
     end
   end
 

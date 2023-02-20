@@ -9,13 +9,11 @@
     <br>
     <%= f.label :email, "Email:", :required => true %>
     <%= f.text_field :email %>
-    <br>
-    <br>
-    <%= f.label :subscription, "Subscription:", :required => true %>
-    <%= f.text_field :subscription %>
-    <br>
-    <br>
-    <br>
+
+    <div class="subscription-field" style="visibility: hidden;">
+        <%= f.label :subscription, "Subscription:", :required => true %>
+        <%= f.hidden_field :subscription %>
+    </div>
     <%= f.submit %>
 
 <% end %>
