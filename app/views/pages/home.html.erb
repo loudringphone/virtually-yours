@@ -1,0 +1,7 @@
+<h1>Looking to escape reality?</h1>
+
+<button>Sign Up To Our Newsletter</button>
+<% if @current_user.present?%>
+<p>Welcome user: <%= @current_user.email %></p>
+
+<% end %>
