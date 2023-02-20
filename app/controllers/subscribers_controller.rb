@@ -13,7 +13,7 @@ class SubscribersController < ApplicationController
     @subscriber = Subscriber.create subscriber_params
     if @subscriber.subscription == ''
       flash[:error] = 'Please subscribe at least one newsletter'
-      redirect_to newsletter_path
+      redirect_to newsletters_path
       return
     end
     @subscriber.save
