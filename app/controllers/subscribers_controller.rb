@@ -29,7 +29,7 @@ class SubscribersController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = @subscriber.errors.full_messages.to_sentence
-      redirect_to newsletter_path
+      redirect_to newsletters_path
     end
   end
 

@@ -148,6 +148,12 @@ body {
     align-items: center;
   }
 
+  figure {
+    display: flex;
+    width:500px;
+    flex-direction: column;
+  }
+
   @media (max-width: 600px) {
     .topnav ul {
       display: none;
