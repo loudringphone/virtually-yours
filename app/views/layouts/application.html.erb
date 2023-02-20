@@ -7,13 +7,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <div class="container">
       <header>
         <nav>
-        
+          <div class="topnav">
+          
+              <img src="assets/virtually-yours-logo.png" alt="menu" class='menu-icon'>
+                <div id="myLinks">
+              <a href="/">News</a>
+              <a href="/">Contact</a>
+              <a href="/">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
         <div>
           <% if @current_admin.present? %>      
             <%= form_tag(login_path, method: :delete) do %>
@@ -22,17 +35,19 @@
             
           <% else %>
             <div class="login">
+<%= image_tag asset_path('vrlogo.png'), style: "float: left; width: 100px;" %>
               <p class='error'>
                   <%= flash[:error] %>  
               </p>
               <p>for admin use only</p>
+
               <%= form_tag login_path do %>
                   <%= label_tag :email, 'email:' %>
                   <%= email_field_tag :email %>
-                  <br><br>
+               
                   <%= label_tag :password, 'password:' %>
                   <%= password_field_tag :password %>
-                  <br><br>
+              
                   <%= submit_tag "login", :class=>"submit" %>
 
               <% end %>
@@ -48,3 +63,14 @@
     </div>
   </body>
 </html>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
