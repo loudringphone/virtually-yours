@@ -154,6 +154,41 @@ body {
     flex-direction: column;
   }
 
+  .labelSignup {
+    display: none;
+  }
+
+  .selector {
+    display: flex;
+    align-self: center;
+  }
+
+  .subselector {
+    display: flex;
+    align-self: center;
+    border-width: 4px 0px 4px 4px;
+    border-color: blue;
+    border-style: solid;
+    cursor: pointer;
+    min-width:max-content;
+    height: 2em;
+    align-items: center;
+    font-size: large;
+    padding:0 5% 0 5%;
+  }
+
+  .dailydealMinus {
+    border-right-width: 4px;
+  }
+  .redmatter2Minus {
+    border-right-width: 4px;
+  }
+  .audioshieldMinus {
+    border-right-width: 4px;
+  }
+
+
+
   @media (max-width: 600px) {
     .topnav ul {
       display: none;
