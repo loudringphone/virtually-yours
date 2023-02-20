@@ -22,11 +22,11 @@
 const subscriptionField = document.querySelector('#subscriber_subscription');
 
 const dailydeal = document.querySelector('.dailydeal')
-const redmatter2 = document.querySelector('.redmatter2')
-const audioshield = document.querySelector('.audioshield')
+const saveworld = document.querySelector('.saveworld')
+const choosechar = document.querySelector('.choosechar')
 const dailydealMinus = document.querySelector('.dailydealMinus')
-const redmatter2Minus = document.querySelector('.redmatter2Minus')
-const audioshieldMinus = document.querySelector('.audioshieldMinus')
+const saveworldMinus = document.querySelector('.saveworldMinus')
+const choosecharMinus = document.querySelector('.choosecharMinus')
 
 
 
@@ -54,19 +54,19 @@ dailydeal.addEventListener("click", function() {
   }
 })
 
-redmatter2.addEventListener("click", function() {
-  if (!subscriptionField.value.includes("Red Matter 2")){
-    redmatter2.textContent = 'Unselect this newsletter'
-    redmatter2Minus.textContent = '-'
+saveworld.addEventListener("click", function() {
+  if (!subscriptionField.value.includes("Save Your World Pack")){
+    saveworld.textContent = 'Unselect this newsletter'
+    saveworldMinus.textContent = '-'
     if (subscriptionField.value.length > 0){
-      subscriptionField.value = subscriptionField.value + ', Red Matter 2';
+      subscriptionField.value = subscriptionField.value + ', Save Your World Pack';
     }
-    else {subscriptionField.value = 'Red Matter 2'}
+    else {subscriptionField.value = 'Save Your World Pack'}
   }
   else {
-    redmatter2.textContent = 'Select this newsletter'
-    redmatter2Minus.textContent = '+'
-    subscriptionField.value = subscriptionField.value.replace('Red Matter 2', '')
+    saveworld.textContent = 'Select this newsletter'
+    saveworldMinus.textContent = '+'
+    subscriptionField.value = subscriptionField.value.replace('Save Your World Pack', '')
     subscriptionField.value = subscriptionField.value.replace(', , ', ', ')
   }
   if (subscriptionField.value.substring(0, 2) === ', ') {
@@ -77,20 +77,20 @@ redmatter2.addEventListener("click", function() {
   }
 })
 
-audioshield.addEventListener("click", function() {
-  if (!subscriptionField.value.includes("Audioshield")){
-    audioshield.textContent = 'Unselect this newsletter'
-    audioshieldMinus.textContent = '-'
+choosechar.addEventListener("click", function() {
+  if (!subscriptionField.value.includes("Choose Your Character Pack")){
+    choosechar.textContent = 'Unselect this newsletter'
+    choosecharMinus.textContent = '-'
     if (subscriptionField.value.length > 0){
-      subscriptionField.value = subscriptionField.value + ', Audioshield';
+      subscriptionField.value = subscriptionField.value + ', Choose Your Character Pack';
     }
-    else {subscriptionField.value = 'Audioshield'}
+    else {subscriptionField.value = 'Choose Your Character Pack'}
 
   }
   else {
-    audioshield.textContent = 'Select this newsletter'
-    audioshieldMinus.textContent = '+'
-    subscriptionField.value = subscriptionField.value.replace('Audioshield', '')
+    choosechar.textContent = 'Select this newsletter'
+    choosecharMinus.textContent = '+'
+    subscriptionField.value = subscriptionField.value.replace('Choose Your Character Pack', '')
     subscriptionField.value = subscriptionField.value.replace(', , ', ', ')
   }
   if (subscriptionField.value.substring(0, 2) === ', ') {
@@ -124,19 +124,19 @@ dailydealMinus.addEventListener("click", function() {
   }
 })
 
-redmatter2Minus.addEventListener("click", function() {
-  if (!subscriptionField.value.includes("Red Matter 2")){
-    redmatter2.textContent = 'Unselect this newsletter'
-    redmatter2Minus.textContent = '-'
+saveworldMinus.addEventListener("click", function() {
+  if (!subscriptionField.value.includes("Save Your World Pack")){
+    saveworld.textContent = 'Unselect this newsletter'
+    saveworldMinus.textContent = '-'
     if (subscriptionField.value.length > 0){
-      subscriptionField.value = subscriptionField.value + ', Red Matter 2';
+      subscriptionField.value = subscriptionField.value + ', Save Your World Pack';
     }
-    else {subscriptionField.value = 'Red Matter 2'}
+    else {subscriptionField.value = 'Save Your World Pack'}
   }
   else {
-    redmatter2.textContent = 'Select this newsletter'
-    redmatter2Minus.textContent = '+'
-    subscriptionField.value = subscriptionField.value.replace('Red Matter 2', '')
+    saveworld.textContent = 'Select this newsletter'
+    saveworldMinus.textContent = '+'
+    subscriptionField.value = subscriptionField.value.replace('Save Your World Pack', '')
     subscriptionField.value = subscriptionField.value.replace(', , ', ', ')
   }
   if (subscriptionField.value.substring(0, 2) === ', ') {
@@ -147,20 +147,20 @@ redmatter2Minus.addEventListener("click", function() {
   }
 })
 
-audioshieldMinus.addEventListener("click", function() {
-  if (!subscriptionField.value.includes("Audioshield")){
-    audioshield.textContent = 'Unselect this newsletter'
-    audioshieldMinus.textContent = '-'
+choosecharMinus.addEventListener("click", function() {
+  if (!subscriptionField.value.includes("Choose Your Character Pack")){
+    choosechar.textContent = 'Unselect this newsletter'
+    choosecharMinus.textContent = '-'
     if (subscriptionField.value.length > 0){
-      subscriptionField.value = subscriptionField.value + ', Audioshield';
+      subscriptionField.value = subscriptionField.value + ', Choose Your Character Pack';
     }
-    else {subscriptionField.value = 'Audioshield'}
+    else {subscriptionField.value = 'Choose Your Character Pack'}
 
   }
   else {
-    audioshield.textContent = 'Select this newsletter'
-    audioshieldMinus.textContent = '+'
-    subscriptionField.value = subscriptionField.value.replace('Audioshield', '')
+    choosechar.textContent = 'Select this newsletter'
+    choosecharMinus.textContent = '+'
+    subscriptionField.value = subscriptionField.value.replace('Choose Your Character Pack', '')
     subscriptionField.value = subscriptionField.value.replace(', , ', ', ')
   }
   if (subscriptionField.value.substring(0, 2) === ', ') {

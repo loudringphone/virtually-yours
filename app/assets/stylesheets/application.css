@@ -88,6 +88,10 @@ body {
     text-decoration:none;
   }
 
+  input[type="submit"] {
+    background-color: blue;
+    color:white;
+  }
   .topnav .menu-icon {
     display: inline-block;
     vertical-align: middle;
@@ -180,10 +184,10 @@ body {
   .dailydealMinus {
     border-right-width: 4px;
   }
-  .redmatter2Minus {
+  .saveworldMinus {
     border-right-width: 4px;
   }
-  .audioshieldMinus {
+  .choosecharMinus {
     border-right-width: 4px;
   }
 
