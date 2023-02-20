@@ -17,7 +17,7 @@
         <td><%= subscriber.last_name %></td>
         <td><%= subscriber.email %></td>
         <td><%= subscriber.subscription %></td>
-        <td><a data-method="delete" href="/subscribers/<%= subscriber.id %>">Unsubscribe</a></td>
+        <td><button><a data-method="delete" href="/subscribers/<%= subscriber.id %>">Unsubscribe</a></button></td>
       </tr>
     <% end %>
   </tbody>

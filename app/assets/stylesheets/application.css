@@ -21,6 +21,7 @@
 
 .container {
     text-align: center;
+    text-align: -webkit-center;
     color: white;
 }
 
@@ -37,12 +38,13 @@ body {
   }
   
   .topnav {
+    display: contents;
     overflow: hidden;
     background-color: #333;
     position: relative;
   }
-
-  .topnav a {
+  
+  .topnav a.icon {
     display: block;
   color: white;
   text-decoration: none;
@@ -60,12 +62,32 @@ body {
 
   }
   
-  .topnav a:hover {
+  .topnav a.icon:hover {
     background-color: #ddd;
     color: black;
   }
 
-   .topnav .menu-icon {
+  .btnLogin {
+    float: right;
+    float: top;
+    background-color: blue;
+    height: 100%;
+  }
+  .btnLogin > a {
+    color: white;
+    text-decoration:none;
+  }
+
+  button {
+    background-color: blue;
+    height: 100%;
+  }
+  button > a {
+    color: white;
+    text-decoration:none;
+  }
+
+  .topnav .menu-icon {
     display: inline-block;
     vertical-align: middle;
     height: 45px;
@@ -98,6 +120,10 @@ body {
   
   .topnav #myLinks li {
     display: inline-block;
+  }
+
+  #myLinks > li > a {
+    color:white
   }
   
   .nav-links {
