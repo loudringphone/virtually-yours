@@ -13,29 +13,10 @@
 </figure>
 
 <div class="signup">
-    <div>
-        <%= form_with url: newsletter_path do |f| %>
-  <div>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
 
-  <div>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
 
-  <div>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
+    <%= render :partial => 'form' %>
 
-  <div>
-    <%= f.label :subscription %>
-    <%= f.text_field :subscription %>
-  </div>
 
-  <%= f.submit "Submit" %>
-<% end %>
     </div>
 </div>
