@@ -1,12 +1,15 @@
+<div class="home">
+    <h1>Looking to escape reality?</h1>
+<button class="btn-blue"><%= link_to "Sign Up To Our Newsletter", newsletter_path, class: "btnSub", style: "text-decoration:none; color:white;" %></button>
+
+
 <% if flash[:success].present? %>
   <p class="success" style='color:green'>
       <%= flash[:success]%>
   </p>
 <% end %>
 
-<div class="home">
-    <h1>Looking to escape reality?</h1>
-<button><%= link_to "Sign Up To Our Newsletters", newsletters_path, class: "btnSub" %></button>
+
 <figure>
     <a href="https://store.steampowered.com/app/1491490/Cosmonious_High/"><img src="assets/cosmonioushigh" alt="cosmonious high"></a>
 </figure>
