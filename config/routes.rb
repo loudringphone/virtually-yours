@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 
   root :to => 'pages#home'
-  get '/newsletter' => 'subscribers#newsletter'
+  get '/newsletters' => 'subscribers#newsletters'
   get '/subscribers' => 'pages#subscribers'
   delete 'subscribers/:id/edit' => 'subscribers#destroy'
   get '/login' => 'session#new'

@@ -5,7 +5,7 @@ class SubscribersController < ApplicationController
     @subscribers = Subscriber.all
   end
 
-  def newsletter
+  def newsletters
     @subscriber = Subscriber.new
   end
 
