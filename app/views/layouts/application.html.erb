@@ -15,16 +15,15 @@
       <header>
         <nav>
           <div class="topnav">
-          
-              <img src="assets/virtually-yours-logo.png" alt="menu" class='menu-icon'>
-                <div id="myLinks">
-              <a href="/">News</a>
-              <a href="/">Contact</a>
-              <a href="/">About</a>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <a href="javascript:void(0);" class="icon" style="float: left;">
               <i class="fa fa-bars"></i>
             </a>
+              <img src="assets/virtually-yours-logo.png" alt="menu" class='menu-icon'>
+                 <ul id="myLinks">
+                    <li><a href="/">News</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">About</a></li>
+                  </ul>
           </div>
 
         <div>
@@ -35,7 +34,10 @@
             
           <% else %>
             <div class="login">
-<%= image_tag asset_path('vrlogo.png'), style: "float: left; width: 100px;" %>
+              <%= image_tag asset_path('vrlogo.png'), style: "float: left; width: 100px;" %>
+              <p class='error'>
+                  <%= flash[:error] %>  
+              </p>
               <p>for admin use only</p>
 
               <%= form_tag login_path do %>
@@ -54,20 +56,16 @@
         </nav>
       </header>
 
-
-
       <%= yield %>
     </div>
   </body>
 </html>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+const icon = document.querySelector('.icon');
+const navLinks = document.querySelector('#myLinks');
+
+icon.addEventListener('click', function() {
+  navLinks.style.display = (navLinks.style.display === 'none') ? 'block' : 'none';
+});
 </script>
