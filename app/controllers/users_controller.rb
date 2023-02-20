@@ -3,14 +3,14 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def new
-    @user = User.new user_params
-    is_subscribed = false
+  def newsletter
+    @user = User.new(user_params)
     if @user.save
-      is_subscribed = true
+      render :new
     else
       render :new
     end
+
   end
 
   def edit
@@ -20,9 +20,9 @@ class UsersController < ApplicationController
   end
 
   private
-    def user_params
-        params.require(:user).permit(:first_name, :last_name, :email)
-    end
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :subscription)
+  end
 
 
 end
