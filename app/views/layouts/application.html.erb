@@ -22,17 +22,19 @@
             
           <% else %>
             <div class="login">
+<%= image_tag asset_path('vrlogo.png'), style: "float: left; width: 100px;" %>
               <p class='error'>
                   <%= flash[:error] %>  
               </p>
               <p>for admin use only</p>
+
               <%= form_tag login_path do %>
                   <%= label_tag :email, 'email:' %>
                   <%= email_field_tag :email %>
-                  <br><br>
+               
                   <%= label_tag :password, 'password:' %>
                   <%= password_field_tag :password %>
-                  <br><br>
+              
                   <%= submit_tag "login", :class=>"submit" %>
 
               <% end %>
