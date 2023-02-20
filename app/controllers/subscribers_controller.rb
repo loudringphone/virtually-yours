@@ -18,7 +18,11 @@ class SubscribersController < ApplicationController
     end
     @subscriber.save
     if @subscriber.save
-      flash[:success] = "Thank you for subscribing the following newsletter(s): #{@subscriber.subscription}"
+      if @subscriber.subscription.split(', ').length > 1
+        flash[:success] = "Thank you for subscribing the following newsletters: #{@subscriber.subscription}"
+      else
+        flash[:success] = "Thank you for subscribing the following newsletter: #{@subscriber.subscription}"
+      end
       redirect_to root_path
     else
       flash[:error] = @subscriber.errors.full_messages.to_sentence
