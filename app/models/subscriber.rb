@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class Subscriber < ApplicationRecord
     validates :email, :uniqueness => true, :presence => true, uniqueness: { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+\z/, message: "must be in the format of 'user@example.com'" }
     validates :first_name, :presence => true
     validates :last_name, :presence => true

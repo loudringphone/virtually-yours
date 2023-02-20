@@ -1,0 +1,110 @@
+<figure>
+    <img src="https://res.cloudinary.com/dspewejua/image/upload/v1676869215/IMAGE_2023-02-20_11_07_51_1_md5kp1.png" alt="daily deal">
+    <button class='dailydeal'>Select this newsletter +</button>
+</figure>
+
+<figure>
+    <img src="https://res.cloudinary.com/dspewejua/image/upload/v1676869209/IMAGE_2023-02-20_11_09_11_1_rtsrqa.png" alt="red matter 2">
+    <button class='redmatter2'>Select this newsletter +</button>
+</figure>
+<figure>
+    <img src="https://res.cloudinary.com/dspewejua/image/upload/v1676869202/IMAGE_2023-02-20_11_10_41_1_jhbajx.png" alt="audioshield">
+    <button class='audioshield'>Select this newsletter +</button>
+</figure>
+
+<div class="signup">
+
+  <% if flash[:error].present? %>
+    <ol class="error">
+        <% flash[:error].split(',').each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ol>
+  <% end %>
+
+
+  <%= render :partial => 'form' %>
+
+
+    </div>
+</div>
+
+<script>
+
+
+const subscriptionField = document.querySelector('#subscriber_subscription');
+
+const dailydeal = document.querySelector('.dailydeal')
+const redmatter2 = document.querySelector('.redmatter2')
+const audioshield = document.querySelector('.audioshield')
+
+
+
+
+dailydeal.addEventListener("click", function() {
+  if (!subscriptionField.value.includes("dailydeal")){
+    dailydeal.textContent = 'Select this newsletter -'
+    if (subscriptionField.value.length > 0){
+      subscriptionField.value = subscriptionField.value + ', dailydeal';
+    }
+    else {subscriptionField.value = 'dailydeal'}
+  }
+  else {
+    dailydeal.textContent = 'Select this newsletter +'
+    subscriptionField.value = subscriptionField.value.replace('dailydeal', '')
+    subscriptionField.value = subscriptionField.value.replace(', , ', ', ')
+  }
+  if (subscriptionField.value.substring(0, 2) === ', ') {
+    subscriptionField.value = subscriptionField.value.substring(2)
+  }
+  if (subscriptionField.value.slice(-2) === ', ') {
+    subscriptionField.value = subscriptionField.value.slice(0, -2)
+  }
+})
+
+redmatter2.addEventListener("click", function() {
+  if (!subscriptionField.value.includes("redmatter2")){
+    redmatter2.textContent = 'Select this newsletter -'
+    if (subscriptionField.value.length > 0){
+      subscriptionField.value = subscriptionField.value + ', redmatter2';
+    }
+    else {subscriptionField.value = 'redmatter2'}
+  }
+  else {
+    redmatter2.textContent = 'Select this newsletter +'
+    subscriptionField.value = subscriptionField.value.replace('redmatter2', '')
+    subscriptionField.value = subscriptionField.value.replace(', , ', ', ')
+  }
+  if (subscriptionField.value.substring(0, 2) === ', ') {
+    subscriptionField.value = subscriptionField.value.substring(2)
+  }
+  if (subscriptionField.value.slice(-2) === ', ') {
+    subscriptionField.value = subscriptionField.value.slice(0, -2)
+  }
+})
+
+audioshield.addEventListener("click", function() {
+  if (!subscriptionField.value.includes("audioshield")){
+    audioshield.textContent = 'Select this newsletter -'
+    if (subscriptionField.value.length > 0){
+      subscriptionField.value = subscriptionField.value + ', audioshield';
+    }
+    else {subscriptionField.value = 'audioshield'}
+
+  }
+  else {
+    audioshield.textContent = 'Select this newsletter +'
+    subscriptionField.value = subscriptionField.value.replace('audioshield', '')
+    subscriptionField.value = subscriptionField.value.replace(', , ', ', ')
+  }
+  if (subscriptionField.value.substring(0, 2) === ', ') {
+    subscriptionField.value = subscriptionField.value.substring(2)
+  }
+  if (subscriptionField.value.slice(-2) === ', ') {
+    subscriptionField.value = subscriptionField.value.slice(0, -2)
+  }
+})
+
+
+
+</script>
