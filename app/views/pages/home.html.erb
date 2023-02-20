@@ -1,9 +1,16 @@
-
-
 <div class="home">
     <h1>Looking to escape reality?</h1>
 <button><%= link_to "Sign Up To Our Newsletter", newsletter_path, class: "btnSub", style: "text-decoration:none; color:black;" %></button>
 
+<% if flash[:success].present? %>
+  <p class="success" style='color:green'>
+      <%= flash[:success]%>
+  </p>
+<% end %>
+
+<div class="home">
+    <h1>Looking to escape reality?</h1>
+<button><%= link_to "Sign Up To Our Newsletter", newsletter_path, class: "btnSub", style: "text-decoration:none; color:black;" %></button>
 <figure>
     <img src="https://res.cloudinary.com/dspewejua/image/upload/v1676869215/IMAGE_2023-02-20_11_07_51_1_md5kp1.png" alt="daily deal">
 </figure>
