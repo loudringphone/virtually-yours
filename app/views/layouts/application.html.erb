@@ -7,17 +7,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-<<<<<<< HEAD
-  
-    <%= yield %>
-=======
     <div class="container">
       <header>
         <nav>
-        
+          <div class="topnav">
+          
+              <img src="assets/virtually-yours-logo.png" alt="menu" class='menu-icon'>
+                <div id="myLinks">
+              <a href="/">News</a>
+              <a href="/">Contact</a>
+              <a href="/">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
         <div>
           <% if @current_admin.present? %>      
             <%= form_tag(login_path, method: :delete) do %>
@@ -50,6 +59,16 @@
 
       <%= yield %>
     </div>
->>>>>>> 93de8d0a223163150f2722d213f123c4a74980d1
   </body>
 </html>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
