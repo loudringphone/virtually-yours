@@ -19,7 +19,10 @@ class SubscribersController < ApplicationController
     @subscriber.save
     if @subscriber.save
       if @subscriber.subscription.split(', ').length > 1
-        flash[:success] = "Thank you for subscribing the following newsletters: #{@subscriber.subscription}"
+        subscriptions = @subscriber.subscription
+        last_comma_index = subscriptions.rindex(', ')
+        subscriptions[last_comma_index, 2] = ' and '
+        flash[:success] = "Thank you for subscribing the following newsletters: #{subscriptions}"
       else
         flash[:success] = "Thank you for subscribing the following newsletter: #{@subscriber.subscription}"
       end
