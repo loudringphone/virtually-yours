@@ -1,0 +1,41 @@
+<figure>
+    <img src="https://res.cloudinary.com/dspewejua/image/upload/v1676869215/IMAGE_2023-02-20_11_07_51_1_md5kp1.png" alt="daily deal">
+    <figcaption class='dailydeal'><div>Select this newsletter</div><div>➕</div></figcaption>
+</figure>
+
+<figure>
+    <img src="https://res.cloudinary.com/dspewejua/image/upload/v1676869209/IMAGE_2023-02-20_11_09_11_1_rtsrqa.png" alt="red matter 2">
+    <figcaption class='redmatter2'><div>Select this newsletter</div><div>➕</div></figcaption>
+</figure>
+<figure>
+    <img src="https://res.cloudinary.com/dspewejua/image/upload/v1676869202/IMAGE_2023-02-20_11_10_41_1_jhbajx.png" alt="audioshield">
+    <figcaption class='audioshield'><div>Select this newsletter</div><div>➕</div></figcaption>
+</figure>
+
+<div class="signup">
+    <div>
+        <%= form_with url: newsletter_path do |f| %>
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :subscription %>
+    <%= f.text_field :subscription %>
+  </div>
+
+  <%= f.submit "Submit" %>
+<% end %>
+    </div>
+</div>
