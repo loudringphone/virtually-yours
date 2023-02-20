@@ -1,9 +1,11 @@
 class SubscribersController < ApplicationController
+  before_action :check_for_admin, :only => [:index]
+
   def index
     @subscribers = Subscriber.all
   end
 
-  def newsletter
+  def newsletters
     @subscriber = Subscriber.new
   end
 
@@ -16,15 +18,24 @@ class SubscribersController < ApplicationController
     end
     @subscriber.save
     if @subscriber.save
-      flash[:success] = "Thank you for subscribing the following newsletter(s): #{@subscriber.subscription}"
+      if @subscriber.subscription.split(', ').length > 1
+        subscriptions = @subscriber.subscription
+        last_comma_index = subscriptions.rindex(', ')
+        subscriptions[last_comma_index, 2] = ' and '
+        flash[:success] = "Thank you for subscribing the following newsletters: #{subscriptions}"
+      else
+        flash[:success] = "Thank you for subscribing the following newsletter: #{@subscriber.subscription}"
+      end
       redirect_to root_path
     else
       flash[:error] = @subscriber.errors.full_messages.to_sentence
-      redirect_to newsletter_path
+      redirect_to newsletters_path
     end
   end
 
-  def show
+  def destroy
+      Subscriber.find_by(id: params[:id]).destroy
+      redirect_to subscribers_path
   end
 
   private

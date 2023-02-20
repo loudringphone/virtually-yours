@@ -1,0 +1,29 @@
+<h1>Subscription list</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Email</td>
+      <td>Subscriptions</td>
+      <td>Unsubscribe?</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @subscribers.each do |subscriber| %>
+      <tr>
+        <td><%= subscriber.first_name %></td>
+        <td><%= subscriber.last_name %></td>
+        <td><%= subscriber.email %></td>
+        <td><%= subscriber.subscription %></td>
+        <td><button><a data-method="delete" href="/subscribers/<%= subscriber.id %>">Unsubscribe</a></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+

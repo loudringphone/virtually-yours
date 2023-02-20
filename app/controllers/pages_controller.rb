@@ -3,17 +3,9 @@ class PagesController < ApplicationController
 
   end
 
-  def users
-
+  def subscribers
+    
   end
 
   
-
-
-  def edit
-  end
-
-  def show
-  end
-
 end

@@ -15,17 +15,25 @@
       <header>
         <nav>
           <div class="topnav">
-          <a href="javascript:void(0);" class="icon" style="float: left;">
+          <% if @current_admin.present? %>
+                    <button class='btnLogin'><%= link_to "admin logout", login_path, :method => 'delete' %></button>    
+            
+                  <% else %>
+                    <button class='btnLogin'><%= link_to "admin login", login_path, :method => 'get' %></button>
+                  <% end %>
+          <a href="javascript:void(0);" class="icon">
               <i class="fa fa-bars"></i>
             </a>
-              <img src="assets/virtually-yours-logo.png" alt="menu" class='menu-icon'> 
+              <a href="/"><img src="assets/virtually-yours-logo.png" alt="menu" class='menu-icon'></a>
                  <ul id="myLinks">
                     <li><a href="/">News</a></li>
                     <li><a href="/">Contact</a></li>
                     <li><a href="/">About</a></li>
                   </ul>
-          </div>
 
+                  
+          </div>
+          
         <div>
           <% if @current_admin.present? %>      
             <%= form_tag(login_path, method: :delete) do %>
@@ -51,6 +59,7 @@
               <% end %>
             </div>
         <% end %>
+          
         </div>
         </nav>
       </header>
@@ -61,8 +70,8 @@
 </html>
 
 <script>
-const icon = document.querySelector('.icon');
-const navLinks = document.querySelector('#myLinks');
+icon = document.querySelector('.icon');
+navLinks = document.querySelector('#myLinks');
 
 icon.addEventListener('click', function() {
   navLinks.style.display = (navLinks.style.display === 'none') ? 'block' : 'none';
