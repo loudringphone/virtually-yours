@@ -8,9 +8,16 @@ class SubscribersController < ApplicationController
   end
 
   def create
-    @subscriber = Subscriber.new subscriber_params
+    @subscriber = Subscriber.create subscriber_params
+    if @subscriber.subscription == ''
+      flash[:error] = 'Please subscribe at least one newsletter'
+      redirect_to newsletter_path
+      return
+    end
+    @subscriber.save
     if @subscriber.save
-      render :newsletter
+      flash[:success] = "Thank you for subscribing the following newsletter(s): #{@subscriber.subscription}"
+      redirect_to root_path
     else
       flash[:error] = @subscriber.errors.full_messages.to_sentence
       redirect_to newsletter_path
