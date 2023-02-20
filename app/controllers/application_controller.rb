@@ -5,4 +5,8 @@ class ApplicationController < ActionController::Base
         @current_admin = Admin.find_by :id => session[:admin_id] if session[:admin_id].present?
         session[:admin_id] = nil unless @current_admin.present?
     end
+
+    def check_for_admin
+        redirect_to :root unless (@current_admin.present?)
+    end
 end

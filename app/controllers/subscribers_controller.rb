@@ -1,4 +1,6 @@
 class SubscribersController < ApplicationController
+  before_action :check_for_admin, :only => [:index]
+
   def index
     @subscribers = Subscriber.all
   end
@@ -24,7 +26,9 @@ class SubscribersController < ApplicationController
     end
   end
 
-  def show
+  def destroy
+      Subscriber.find_by(id: params[:id]).destroy
+      redirect_to subscribers_path
   end
 
   private
