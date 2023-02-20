@@ -10,6 +10,41 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <nav>
+        
+        <div>
+          <% if @current_admin.present? %>      
+            <%= form_tag(login_path, method: :delete) do %>
+              <%= submit_tag "logout" %>
+            <% end %>
+            
+          <% else %>
+            <div class="login">
+              <p class='error'>
+                  <%= flash[:error] %>  
+              </p>
+              <p>for admin use only</p>
+              <%= form_tag login_path do %>
+                  <%= label_tag :email, 'email:' %>
+                  <%= email_field_tag :email %>
+                  <br><br>
+                  <%= label_tag :password, 'password:' %>
+                  <%= password_field_tag :password %>
+                  <br><br>
+                  <%= submit_tag "login", :class=>"submit" %>
+
+              <% end %>
+            </div>
+        <% end %>
+        </div>
+        </nav>
+      </header>
+
+
+
+      <%= yield %>
+    </div>
   </body>
 </html>
