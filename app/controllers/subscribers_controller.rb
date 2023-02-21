@@ -30,7 +30,7 @@ class SubscribersController < ApplicationController
       end
       redirect_to root_path
     else
-      flash[:error] = @subscriber.errors.full_messages.to_sentence
+      flash[:error] = @subscriber.errors.full_messages.to_sentence.sub(', and ',', ')
       redirect_to newsletters_path
     end
   end
