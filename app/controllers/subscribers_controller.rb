@@ -24,9 +24,9 @@ class SubscribersController < ApplicationController
         subscriptions = @subscriber.subscription
         last_comma_index = subscriptions.rindex(', ')
         subscriptions[last_comma_index, 2] = ' and '
-        flash[:success] = "Thank you for subscribing the following newsletters: #{subscriptions}"
+        flash[:success] = "Thank you for subscribing the following newsletters #{@subscriber.frequency.downcase}: #{subscriptions}"
       else
-        flash[:success] = "Thank you for subscribing the following newsletter: #{@subscriber.subscription}"
+        flash[:success] = "Thank you for subscribing the following newsletter #{@subscriber.frequency.downcase}: #{@subscriber.subscription}"
       end
       redirect_to root_path
     else
@@ -46,7 +46,7 @@ class SubscribersController < ApplicationController
   end
 
   def subscriber_params
-    params.require(:subscriber).permit(:first_name, :last_name, :email, :subscription)
+    params.require(:subscriber).permit(:first_name, :last_name, :email, :subscription, :frequency)
   end
 
 

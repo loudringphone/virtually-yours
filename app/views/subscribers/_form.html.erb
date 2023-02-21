@@ -36,7 +36,23 @@
     <div class='selector'><div class='subselector choosechar'>Unselect this newsletter</div> <div class='subselector choosecharMinus'>&#10003;</div></div>
 </figure>
 <hr>
+    <%= f.label :frequency, "Frequency:", :required => true, class: "labelSignup"  %>
 
-    <%= f.submit "Subscribe", :class=>"btnSubscribe btnLogin"%>
+  <label class='frequency'>
+    <%= f.radio_button :frequency, 'Weekly', :checked => true %>
+    <span class='frequency'>&nbsp receive newsletter weekly</span>
+  </label>
+  <br>
+  <label class='frequency'>
+    <%= f.radio_button :frequency, 'Monthly' %>
+    <span class='frequency'>&nbsp receive newsletter monthly</span>
+  </label>
+
+
+
+
+
+
+    <%= f.submit "Subscribe", :class=>"btnSubscribe"%>
 
 <% end %>
