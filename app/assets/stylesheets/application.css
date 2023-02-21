@@ -109,6 +109,7 @@ html body {
     font-size: xx-large;
     padding: 10px 15px 10px 15px;
     place-content: center;
+    margin-top: 15px;
   }
   .topnav .menu-icon {
     display: inline-block;
