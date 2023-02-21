@@ -86,7 +86,7 @@ html body {
   button {
     height: 100%;
     color:white;
-    background-color: #0924B0;
+    background-color: blue;
     border-radius: 10px;
     text-decoration: none;
     border-style: hidden;
@@ -102,7 +102,7 @@ html body {
   input[type="submit"] {
     display: flex;
     color:white;
-    background-color: #0924B0;
+    background-color: blue;
     border-radius: 10px;
     text-decoration: none;
     border-style: hidden;
@@ -238,7 +238,7 @@ html body {
     display: flex;
     align-self: center;
     border-width: 4px 0px 4px 4px;
-    border-color: blue;
+    border-color:blue;
     border-style: solid;
     cursor: pointer;
     min-width:max-content;
@@ -318,7 +318,7 @@ html body {
   }
  
   .btn-blue {
-    background-color: #0924B0;
+    background-color: blue;
     border-radius: 10px;
     text-decoration: none;
     border-style: hidden;
