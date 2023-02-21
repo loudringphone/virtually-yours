@@ -74,13 +74,13 @@ html body {
 
   .btnLogin {
     float: right;
-    float: top;
     background-color: blue;
     height: 100%;
   }
   .btnLogin > a {
     color: white;
     text-decoration:none;
+    padding: 0
   }
 
   button {
