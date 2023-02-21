@@ -25,7 +25,7 @@
               <i class="fa fa-bars"></i>
             </a>
               <a href="/"><img src="https://res.cloudinary.com/de3gkfx0w/image/upload/v1676940436/virtually-yours-logo_xr08jw.png" alt="menu" class='menu-icon'></a>
-                 <ul id="myLinks">
+                 <ul id="navLinks">
                     <li><a href="/">News</a></li>
                     <li><a href="/">Contact</a></li>
                     <li><a href="/">About</a></li>
@@ -45,8 +45,8 @@
 
 <script>
 icon = document.querySelector('.icon');
-navLinks = document.querySelector('#myLinks');
-
+navLinks = document.querySelector('#navLinks');
+navLinks.style.display = 'none'
 icon.addEventListener('click', function() {
   navLinks.style.display = (navLinks.style.display === 'none') ? 'block' : 'none';
 });
