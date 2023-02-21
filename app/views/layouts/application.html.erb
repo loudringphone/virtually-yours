@@ -16,10 +16,10 @@
         <nav>
           <div class="topnav">
           <% if @current_admin.present? %>
-                    <button class='btnLogin'><%= link_to "admin logout", login_path, :method => 'delete' %></button>    
+                    <button class='btnLogin'><%= link_to "logout", login_path, :method => 'delete' %></button>    
             
                   <% else %>
-                    <button class='btnLogin'><%= link_to "admin login", login_path, :method => 'get' %></button>
+                    <button class='btnLogin'><%= link_to "login", login_path, :method => 'get' %></button>
                   <% end %>
           <a href="javascript:void(0);" class="icon">
               <i class="fa fa-bars"></i>

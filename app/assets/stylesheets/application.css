@@ -27,6 +27,7 @@
 
 body {
     background-color: #1E1E1E;
+    font-family: Arial, Helvetica, sans-serif;
 }
  .mobile-container {
     max-width: 480px;
@@ -79,9 +80,15 @@ body {
   }
 
   button {
-    background-color: blue;
     height: 100%;
     color:white;
+    background-color: #0924B0;
+    border-radius: 10px;
+    text-decoration: none;
+    border-style: hidden;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px
   }
   button > a {
     color: white;
@@ -89,8 +96,15 @@ body {
   }
 
   input[type="submit"] {
-    background-color: blue;
+    display: flex;
     color:white;
+    background-color: #0924B0;
+    border-radius: 10px;
+    text-decoration: none;
+    border-style: hidden;
+    font-size: xx-large;
+    padding: 10px 15px 10px 15px;
+    place-content: center;
   }
   .topnav .menu-icon {
     display: inline-block;
@@ -158,6 +172,54 @@ body {
     flex-direction: column;
   }
 
+  .headerNewsletters{
+    background-color: gray;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    font-family: arial;
+  }
+
+  .containerNewsletters {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signup {
+    width: fit-content;
+    align-self: center;
+    text-align-last: left;
+
+  }
+
+  .totheleft {
+    padding-left: 40px;
+}
+  h3.headingNewsletters {
+    font-weight: normal;
+    width: 80%;
+    text-align: left;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+   
+    
+  }
+  input {
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    width: 60%;
+    font-size: medium;
+    padding: 2px 0 5px 5px;
+    color: white;
+  }
+  input::placeholder {
+    color: white;
+  }
   .labelSignup {
     display: none;
   }
@@ -180,6 +242,27 @@ body {
     font-size: large;
     padding:0 5% 0 5%;
   }
+
+  hr {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+
+  .subselector {
+    font-size: larger;
+  }
+
+  .dailydeal {
+    padding: 0 30px 0 30px;
+  }
+  .saveworld {
+    padding: 0 30px 0 30px;
+  }
+  .choosechar {
+    padding: 0 30px 0 30px;
+  }
+
 
   .dailydealMinus {
     border-right-width: 4px;
@@ -207,7 +290,11 @@ body {
     background-color: #0924B0;
     border-radius: 10px;
     text-decoration: none;
+    border-style: hidden;
     font-size: 20px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px
   }
   h1 {
     font-family: Arial, Helvetica, sans-serif;

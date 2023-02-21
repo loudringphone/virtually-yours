@@ -1,19 +1,21 @@
 <%= form_for @subscriber do |f| %>
-    <%= f.label :email, "Email:", :required => true, class: "labelSignup" %>
-    <%= f.text_field :email, placeholder: "Email*" %>
-    <br>
-    <br>
-    <%= f.label :first_name, "First name:", :required => true, class: "labelSignup"  %>
-    <%= f.text_field :first_name, placeholder: "First name*" %>
-    <br>
-    <br>
-    <%= f.label :last_name, "Last name:", :required => true, class: "labelSignup" %>
-    <%= f.text_field :last_name, placeholder: "Last name*" %>
-    
+    <div class='totheleft'>
+        <%= f.label :email, "Email:", :required => true, class: "labelSignup" %>
+        <%= f.text_field :email, placeholder: "Email*" %>
+        <br>
+        <br>
+        <%= f.label :first_name, "First name:", :required => true, class: "labelSignup"  %>
+        <%= f.text_field :first_name, placeholder: "First name*" %>
+        <br>
+        <br>
+        <%= f.label :last_name, "Last name:", :required => true, class: "labelSignup" %>
+        <%= f.text_field :last_name, placeholder: "Last name*" %>
+        
 
-    <div class="subscription-field" style="visibility: hidden;">
-        <%= f.label :subscription, "Subscription:", :required => true %>
-        <%= f.hidden_field :subscription, value: "Daily Deal, Save Your World Pack, Choose Your Character Pack"  %>
+        <div class="subscription-field" style="visibility: hidden;">
+            <%= f.label :subscription, "Subscription:", :required => true %>
+            <%= f.hidden_field :subscription, value: "Daily Deal, Save Your World Pack, Choose Your Character Pack"  %>
+        </div>
     </div>
 
     <figure>
@@ -21,19 +23,19 @@
     <h3>Recieve daily deals</h3>
     <div class='selector'><div class='subselector dailydeal'>Unselect this newsletter</div> <div class='subselector dailydealMinus'>-</div></div>
 </figure>
-
+<hr>
 <figure>
     <img src="assets/saveyourworldnews" alt="save your world">
     <h3>Receive ‘Save your world’ Pack with different games</h3>
     <div class='selector'><div class='subselector saveworld'>Unselect this newsletter</div> <div class='subselector saveworldMinus'>-</div></div>
 </figure>
-</figure>
+<hr>
 <figure>
     <img src="assets/choosecharactersnews" alt="choose your characters">
     <h3>Receive pack with different characters</h3>
     <div class='selector'><div class='subselector choosechar'>Unselect this newsletter</div> <div class='subselector choosecharMinus'>-</div></div>
 </figure>
-
+<hr>
 
     <%= f.submit "Subscribe" %>
 

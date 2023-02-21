@@ -1,6 +1,6 @@
-<div>Newsletters</div>
-
-<p>Our newsletters will transport you to a whole new world of news and updates</p>
+<div class='headerNewsletters'>Newsletters</div>
+<div class=containerNewsletters>
+<h3 class='headingNewsletters'>Our newsletters will transport you to a whole new world of news and updates</h3>
 <div class="signup">
   <% if flash[:error].present? %>
     <ol class="error">
@@ -9,24 +9,24 @@
         <% end %>
     </ol>
   <% end %>
-  <p>Enter your details</p>
+ <div class='totheleft'><p style='font-weight:bold;'>Enter your details</p></div>
   <%= render :partial => 'form' %>
 </div>
 
-
+</div>
 
 
 <script>
 
 
-const subscriptionField = document.querySelector('#subscriber_subscription');
+subscriptionField = document.querySelector('#subscriber_subscription');
 
-const dailydeal = document.querySelector('.dailydeal')
-const saveworld = document.querySelector('.saveworld')
-const choosechar = document.querySelector('.choosechar')
-const dailydealMinus = document.querySelector('.dailydealMinus')
-const saveworldMinus = document.querySelector('.saveworldMinus')
-const choosecharMinus = document.querySelector('.choosecharMinus')
+dailydeal = document.querySelector('.dailydeal')
+saveworld = document.querySelector('.saveworld')
+choosechar = document.querySelector('.choosechar')
+dailydealMinus = document.querySelector('.dailydealMinus')
+saveworldMinus = document.querySelector('.saveworldMinus')
+choosecharMinus = document.querySelector('.choosecharMinus')
 
 
 
