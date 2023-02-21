@@ -11,6 +11,8 @@ class SubscribersController < ApplicationController
 
   def create
     @subscriber = Subscriber.create subscriber_params
+    @subscriber.first_name = titleize(@subscriber.first_name)
+    @subscriber.last_name = titleize(@subscriber.last_name)
     if @subscriber.subscription == ''
       flash[:error] = 'Please subscribe at least one newsletter'
       redirect_to newsletters_path
@@ -39,6 +41,10 @@ class SubscribersController < ApplicationController
   end
 
   private
+  def titleize(str)
+    str.split(/ |\_/).map(&:capitalize).join(" ")
+  end
+
   def subscriber_params
     params.require(:subscriber).permit(:first_name, :last_name, :email, :subscription)
   end
