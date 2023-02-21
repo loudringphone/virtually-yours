@@ -7,6 +7,7 @@
       <td>Last Name</td>
       <td>Email</td>
       <td>Subscriptions</td>
+      <td>Frequency</td>
       <td>Unsubscribe?</td>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
         <td><%= subscriber.last_name %></td>
         <td><%= subscriber.email %></td>
         <td><%= subscriber.subscription %></td>
+        <td><%= subscriber.frequency %></td>
         <td><button><a data-method="delete" href="/subscribers/<%= subscriber.id %>">Unsubscribe</a></button></td>
       </tr>
     <% end %>

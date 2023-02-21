@@ -4,7 +4,7 @@
 <div class="signup">
   <% if flash[:error].present? %>
     <ol class="error">
-        <% flash[:error].split(',').each do |msg| %>
+        <% flash[:error].split(', ').each do |msg| %>
             <li  style='color:red'><%= msg %></li>
         <% end %>
     </ol>
@@ -27,13 +27,14 @@ choosechar = document.querySelector('.choosechar')
 dailydealMinus = document.querySelector('.dailydealMinus')
 saveworldMinus = document.querySelector('.saveworldMinus')
 choosecharMinus = document.querySelector('.choosecharMinus')
-
-
-
+dailydealImg = document.querySelector('#dailydeal')
+saveworldImg = document.querySelector('#saveworld')
+choosecharImg = document.querySelector('#choosechar')
 
 dailydeal.addEventListener("click", function() {
   if (!subscriptionField.value.includes("Daily Deal")){
-    dailydeal.textContent = 'Unselect this newsletter'
+    dailydealImg.style.filter = "brightness(100%)"
+    dailydeal.textContent = 'Deselect this newsletter'
     dailydealMinus.textContent = "\u2713"
     if (subscriptionField.value.length > 0){
       subscriptionField.value = subscriptionField.value + ', Daily Deal';
@@ -41,6 +42,7 @@ dailydeal.addEventListener("click", function() {
     else {subscriptionField.value = 'Daily Deal'}
   }
   else {
+    dailydealImg.style.filter = "brightness(25%)"
     dailydeal.textContent = 'Select this newsletter'
     dailydealMinus.textContent = '+'
     subscriptionField.value = subscriptionField.value.replace('Daily Deal', '')
@@ -56,7 +58,8 @@ dailydeal.addEventListener("click", function() {
 
 saveworld.addEventListener("click", function() {
   if (!subscriptionField.value.includes("Save Your World Pack")){
-    saveworld.textContent = 'Unselect this newsletter'
+    saveworldImg.style.filter = "brightness(100%)"
+    saveworld.textContent = 'Deselect this newsletter'
     saveworldMinus.textContent = "\u2713"
     if (subscriptionField.value.length > 0){
       subscriptionField.value = subscriptionField.value + ', Save Your World Pack';
@@ -64,6 +67,7 @@ saveworld.addEventListener("click", function() {
     else {subscriptionField.value = 'Save Your World Pack'}
   }
   else {
+    saveworldImg.style.filter = "brightness(25%)"
     saveworld.textContent = 'Select this newsletter'
     saveworldMinus.textContent = '+'
     subscriptionField.value = subscriptionField.value.replace('Save Your World Pack', '')
@@ -79,7 +83,8 @@ saveworld.addEventListener("click", function() {
 
 choosechar.addEventListener("click", function() {
   if (!subscriptionField.value.includes("Choose Your Character Pack")){
-    choosechar.textContent = 'Unselect this newsletter'
+    choosecharImg.style.filter = "brightness(100%)"
+    choosechar.textContent = 'Deselect this newsletter'
     choosecharMinus.textContent = "\u2713"
     if (subscriptionField.value.length > 0){
       subscriptionField.value = subscriptionField.value + ', Choose Your Character Pack';
@@ -88,6 +93,7 @@ choosechar.addEventListener("click", function() {
 
   }
   else {
+    choosecharImg.style.filter = "brightness(25%)"
     choosechar.textContent = 'Select this newsletter'
     choosecharMinus.textContent = '+'
     subscriptionField.value = subscriptionField.value.replace('Choose Your Character Pack', '')
@@ -103,7 +109,7 @@ choosechar.addEventListener("click", function() {
 
 dailydealMinus.addEventListener("click", function() {
   if (!subscriptionField.value.includes("Daily Deal")){
-    dailydeal.textContent = 'Unselect this newsletter'
+    dailydeal.textContent = 'Deselect this newsletter'
     dailydealMinus.textContent = "\u2713"
     if (subscriptionField.value.length > 0){
       subscriptionField.value = subscriptionField.value + ', Daily Deal';
@@ -126,7 +132,7 @@ dailydealMinus.addEventListener("click", function() {
 
 saveworldMinus.addEventListener("click", function() {
   if (!subscriptionField.value.includes("Save Your World Pack")){
-    saveworld.textContent = 'Unselect this newsletter'
+    saveworld.textContent = 'Deselect this newsletter'
     saveworldMinus.textContent = "\u2713"
     if (subscriptionField.value.length > 0){
       subscriptionField.value = subscriptionField.value + ', Save Your World Pack';
@@ -149,7 +155,7 @@ saveworldMinus.addEventListener("click", function() {
 
 choosecharMinus.addEventListener("click", function() {
   if (!subscriptionField.value.includes("Choose Your Character Pack")){
-    choosechar.textContent = 'Unselect this newsletter'
+    choosechar.textContent = 'Deselect this newsletter'
     choosecharMinus.textContent = "\u2713"
     if (subscriptionField.value.length > 0){
       subscriptionField.value = subscriptionField.value + ', Choose Your Character Pack';

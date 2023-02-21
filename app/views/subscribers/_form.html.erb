@@ -19,24 +19,40 @@
     </div>
 
     <figure>
-    <img src="assets/dailydealnews" alt="daily deal">
+    <img id='dailydeal' src="assets/dailydealnews" alt="daily deal">
     <h3>Recieve daily deals</h3>
-    <div class='selector'><div class='subselector dailydeal'>Unselect this newsletter</div> <div class='subselector dailydealMinus'>&#10003;</div></div>
+    <div class='selector'><div class='subselector dailydeal'>Deselect this newsletter</div> <div class='subselector dailydealMinus'>&#10003;</div></div>
 </figure>
 <hr>
 <figure>
-    <img src="assets/saveyourworldnews" alt="save your world">
+    <img id='saveworld'  src="assets/saveyourworldnews" alt="save your world">
     <h3>Receive ‘Save your world’ Pack with different games</h3>
-    <div class='selector'><div class='subselector saveworld'>Unselect this newsletter</div> <div class='subselector saveworldMinus'>&#10003;</div></div>
+    <div class='selector'><div class='subselector saveworld'>Deselect this newsletter</div> <div class='subselector saveworldMinus'>&#10003;</div></div>
 </figure>
 <hr>
 <figure>
-    <img src="assets/choosecharactersnews" alt="choose your characters">
+    <img id='choosechar'  src="assets/choosecharactersnews" alt="choose your characters">
     <h3>Receive pack with different characters</h3>
-    <div class='selector'><div class='subselector choosechar'>Unselect this newsletter</div> <div class='subselector choosecharMinus'>&#10003;</div></div>
+    <div class='selector'><div class='subselector choosechar'>Deselect this newsletter</div> <div class='subselector choosecharMinus'>&#10003;</div></div>
 </figure>
 <hr>
+    <%= f.label :frequency, "Frequency:", :required => true, class: "labelSignup"  %>
 
-    <%= f.submit "Subscribe" %>
+  <label class='frequency'>
+    <%= f.radio_button :frequency, 'Weekly', :checked => true %>
+    <span class='frequency'>&nbsp receive newsletter weekly</span>
+  </label>
+  <br>
+  <label class='frequency'>
+    <%= f.radio_button :frequency, 'Monthly' %>
+    <span class='frequency'>&nbsp receive newsletter monthly</span>
+  </label>
+
+
+
+
+
+
+    <%= f.submit "Subscribe", :class=>"btnSubscribe"%>
 
 <% end %>
