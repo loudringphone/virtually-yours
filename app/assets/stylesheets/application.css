@@ -92,6 +92,10 @@ html body {
     text-decoration:none;
   }
 
+  input[type="submit"] {
+    background-color: blue;
+    color:white;
+  }
   .topnav .menu-icon {
     display: inline-block;
     vertical-align: middle;
@@ -157,6 +161,41 @@ html body {
     width:500px;
     flex-direction: column;
   }
+
+  .labelSignup {
+    display: none;
+  }
+
+  .selector {
+    display: flex;
+    align-self: center;
+  }
+
+  .subselector {
+    display: flex;
+    align-self: center;
+    border-width: 4px 0px 4px 4px;
+    border-color: blue;
+    border-style: solid;
+    cursor: pointer;
+    min-width:max-content;
+    height: 2em;
+    align-items: center;
+    font-size: large;
+    padding:0 5% 0 5%;
+  }
+
+  .dailydealMinus {
+    border-right-width: 4px;
+  }
+  .saveworldMinus {
+    border-right-width: 4px;
+  }
+  .choosecharMinus {
+    border-right-width: 4px;
+  }
+
+
 
   @media (max-width: 600px) {
     .topnav ul {
