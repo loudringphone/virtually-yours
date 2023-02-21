@@ -30,8 +30,6 @@
                     <li><a href="/">Contact</a></li>
                     <li><a href="/">About</a></li>
                   </ul>
-
-                  
           </div>
           
         <div>
@@ -41,23 +39,6 @@
             <% end %>
             
           <% else %>
-            <div class="login">
-              <p class='error'>
-                  <%= flash[:error] %>  
-              </p>
-              <p>for admin use only</p>
-
-              <%= form_tag login_path do %>
-                  <%= label_tag :email, 'email:' %>
-                  <%= email_field_tag :email %>
-               
-                  <%= label_tag :password, 'password:' %>
-                  <%= password_field_tag :password %>
-              
-                  <%= submit_tag "login", :class=>"submit" %>
-
-              <% end %>
-            </div>
         <% end %>
           
         </div>
