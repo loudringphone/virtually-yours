@@ -24,8 +24,10 @@
           <a href="javascript:void(0);" class="icon">
               <i class="fa fa-bars"></i>
             </a>
-              <a href="/"><img src="https://res.cloudinary.com/de3gkfx0w/image/upload/v1676940436/virtually-yours-logo_xr08jw.png" alt="menu" class='menu-icon'></a>
-                 <ul id="navLinks">
+
+            <a href="/"><img src="vrlogo.png" alt="menu" class='menu-icon'></a>  
+
+                  <ul id="navLinks">
                     <li><a href="/">News</a></li>
                     <li><a href="/">Contact</a></li>
                     <li><a href="/">About</a></li>
@@ -35,16 +37,6 @@
                   </ul>
           </div>
           
-        <div>
-          <% if @current_admin.present? %>      
-            <%= form_tag(login_path, method: :delete) do %>
-              <%= submit_tag "logout" %>
-            <% end %>
-            
-          <% else %>
-        <% end %>
-          
-        </div>
         </nav>
       </header>
 
