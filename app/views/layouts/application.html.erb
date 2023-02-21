@@ -35,6 +35,16 @@
                   </ul>
           </div>
           
+        <div>
+          <% if @current_admin.present? %>      
+            <%= form_tag(login_path, method: :delete) do %>
+              <%= submit_tag "logout" %>
+            <% end %>
+            
+          <% else %>
+        <% end %>
+          
+        </div>
         </nav>
       </header>
 
