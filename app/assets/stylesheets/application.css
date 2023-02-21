@@ -17,6 +17,10 @@
  html {
     padding: 0;
  }
+ .login {
+    text-align: right;
+    color: white;
+}
 
 .container {
     text-align: center;
@@ -70,13 +74,13 @@ html body {
 
   .btnLogin {
     float: right;
-    float: top;
     background-color: blue;
     height: 100%;
   }
   .btnLogin > a {
     color: white;
     text-decoration:none;
+    padding: 0
   }
 
   button {
@@ -112,8 +116,7 @@ html body {
     height: 45px;
     margin-right: 10px;
   }
-  .topnav #myLinks {
-    display: flex;
+  .topnav #navLinks {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -129,7 +132,7 @@ html body {
     padding: 0;
     list-style-type: none;
   }
-  .topnav #myLinks {
+  .topnav #navLinks {
     display: none;
     list-style: none;
     margin: 0;
@@ -137,11 +140,11 @@ html body {
     text-align: center;
   }
   
-  .topnav #myLinks li {
+  .topnav #navLinks li {
     display: inline-block;
   }
 
-  #myLinks > li > a {
+  #navLinks > li > a {
     color:white
   }
   
@@ -227,6 +230,7 @@ html body {
   .selector {
     display: flex;
     align-self: center;
+    justify-content: center;
   }
 
   .subselector {
@@ -298,6 +302,9 @@ html body {
       width: 100%;
       height: auto;
     }
+    .btn-blue {
+      margin-bottom:5%
+    }
   }
  
   .btn-blue {
@@ -308,17 +315,13 @@ html body {
     font-size: 20px;
     padding: 8px;
     padding-left: 20px;
-    padding-right: 20px
+    padding-right: 20px;
   }
   h1 {
     font-family: Arial, Helvetica, sans-serif;
   }
   
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .login-container {
     display: flex;
